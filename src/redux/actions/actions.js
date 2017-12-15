@@ -1,12 +1,12 @@
+import uuid      from 'uuid'
 import constants from '../data/constants'
 
 const C = constants.actions
 
-let nextTodoId = 0
 export const addTodo = text => {
   return {
     type: C.ADD_TODO,
-    id: nextTodoId++,
+    id: uuid.v4(),
     text
   }
 }
