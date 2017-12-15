@@ -9,7 +9,7 @@ const purify = function(stateless_func) {
             let validate_action = action => {
                 let {actions} = this.context
                 if ((actions instanceof Object) && (actions[action] !== undefined)) return true
-                throw new Error(`required Redux action "${action}" is not defined in the context of the presentation component tree`)
+                throw new Error(`React stateless presentation component "${stateless_func.name}" requires a Redux action creator "${action}" which is not defined in the context of the React component tree`)
             }
             let key = 'requireActions'
             let val = stateless_func[key]
