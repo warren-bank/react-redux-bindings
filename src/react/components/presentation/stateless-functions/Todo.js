@@ -1,7 +1,7 @@
 import PropTypes  from 'prop-types'
 import purify     from '../../higher-order/purify'
 
-const Todo = ({ onClick, completed, text }) => (
+const Todo = ({onClick, completed, text}, context) => (
   <li
     onClick={onClick}
     style={ {

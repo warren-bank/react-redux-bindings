@@ -1,7 +1,7 @@
 import PropTypes  from 'prop-types'
 import purify     from '../../higher-order/purify'
 
-const Link = ({ active, children, onClick }) => {
+const Link = ({active, children, onClick}, context) => {
   if (active) {
     return <span>{children}</span>
   }

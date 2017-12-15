@@ -20,4 +20,6 @@ TodoList.propTypes = {
   ).isRequired
 }
 
+TodoList.requireActions = ['toggleTodo']
+
 export default purify(TodoList)

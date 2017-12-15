@@ -16,7 +16,7 @@ const getVisibleTodos = (todos, filter) => {
   }
 }
 
-const App = ({state}, {actions}) => {
+const App = ({state}, context) => {
   let todos  = getVisibleTodos(state.todos, state.visibilityFilter)
 
   return (

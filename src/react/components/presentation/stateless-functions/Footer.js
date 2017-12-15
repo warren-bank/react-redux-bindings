@@ -2,7 +2,7 @@ import PropTypes  from 'prop-types'
 import purify     from '../../higher-order/purify'
 import FilterLink from './FilterLink'
 
-const Footer = ({visibilityFilter}, {actions}) => (
+const Footer = ({visibilityFilter}, context) => (
   <p>
     Show:
     {' '}

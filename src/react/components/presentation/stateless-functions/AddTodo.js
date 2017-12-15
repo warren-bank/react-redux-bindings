@@ -29,4 +29,6 @@ const AddTodo = (props, {actions}) => {
   )
 }
 
+AddTodo.requireActions = ['addTodo']
+
 export default purify(AddTodo)
