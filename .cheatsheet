@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+git init
+git remote add origin git@github.com:warren-bank/react-redux-bindings.git
+
+git checkout --orphan 'react-redux'
+git add --all .
+git commit -m 'identical copy of source code to example in official "react-redux" documentation'
+git push -u origin 'react-redux'
+
+git checkout --orphan 'context-actions'
+git add --all .
+git commit -m 'minimal patch required to migrate strategy'
+git push -u origin 'context-actions'
+
+./generate_diff.sh
