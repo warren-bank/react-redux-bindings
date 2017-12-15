@@ -1,7 +1,11 @@
+import constants from '../data/constants'
+
+const C = constants.actions
+
 let nextTodoId = 0
 export const addTodo = text => {
   return {
-    type: 'ADD_TODO',
+    type: C.ADD_TODO,
     id: nextTodoId++,
     text
   }
@@ -9,14 +13,14 @@ export const addTodo = text => {
 
 export const setVisibilityFilter = filter => {
   return {
-    type: 'SET_VISIBILITY_FILTER',
+    type: C.SET_VISIBILITY_FILTER,
     filter
   }
 }
 
 export const toggleTodo = id => {
   return {
-    type: 'TOGGLE_TODO',
+    type: C.TOGGLE_TODO,
     id
   }
 }
