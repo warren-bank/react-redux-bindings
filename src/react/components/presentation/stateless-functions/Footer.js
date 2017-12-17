@@ -24,4 +24,6 @@ Footer.propTypes = {
   visibilityFilter: PropTypes.string.isRequired
 }
 
+Footer.displayName = 'Footer'
+
 export default purify(Footer)

@@ -22,4 +22,6 @@ TodoList.propTypes = {
 
 TodoList.requireActions = ['toggleTodo']
 
+TodoList.displayName = 'TodoList'
+
 export default purify(TodoList)

@@ -31,4 +31,6 @@ const AddTodo = (props, {actions}) => {
 
 AddTodo.requireActions = ['addTodo']
 
+AddTodo.displayName = 'AddTodo'
+
 export default purify(AddTodo)

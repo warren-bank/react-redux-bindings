@@ -25,4 +25,6 @@ Link.propTypes = {
   onClick: PropTypes.func.isRequired
 }
 
+Link.displayName = 'Link'
+
 export default purify(Link)

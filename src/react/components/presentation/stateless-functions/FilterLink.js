@@ -19,4 +19,6 @@ FilterLink.propTypes = {
 
 FilterLink.requireActions = ['setVisibilityFilter']
 
+FilterLink.displayName = 'FilterLink'
+
 export default purify(FilterLink)

@@ -32,4 +32,6 @@ App.propTypes = {
   state: PropTypes.object.isRequired
 }
 
+App.displayName = 'App'
+
 export default purify(App)

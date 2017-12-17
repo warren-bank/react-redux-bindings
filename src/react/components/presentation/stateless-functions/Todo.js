@@ -18,4 +18,6 @@ Todo.propTypes = {
   text: PropTypes.string.isRequired
 }
 
+Todo.displayName = 'Todo'
+
 export default purify(Todo)
