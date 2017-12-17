@@ -42,15 +42,6 @@ const purify = function(stateless_func) {
     {
         let key = 'displayName'
         let val = (stateless_func[key] || "").trim()
-
-        if (!val) {
-            val = (stateless_func.name || "").trim()
-
-            // do not assign "displayName" to the name of the function component when it has been obfuscated
-            let min_required_char_length = 4
-            if (val.length < min_required_char_length) val=""
-        }
-
         if (val) {
             // enforce rule that first character must be uppercase.
             // this convention allows the component to be found by its "displayName" with a selector in "Enzyme".
