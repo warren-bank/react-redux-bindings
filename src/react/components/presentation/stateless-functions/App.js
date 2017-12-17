@@ -1,5 +1,6 @@
 import PropTypes  from 'prop-types'
-import purify     from '../../higher-order/purify'
+
+import purify     from 'react/components/higher-order/purify'
 import AddTodo    from './AddTodo'
 import TodoList   from './TodoList'
 import Footer     from './Footer'

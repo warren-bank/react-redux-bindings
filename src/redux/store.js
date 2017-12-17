@@ -1,10 +1,10 @@
 import { createStore, applyMiddleware } from 'redux'
 
-import constants    from './data/constants'
-import initialState from './data/initial_state'
-import logger       from './middleware/logger'
-import saver        from './middleware/saver'
-import rootReducer  from './reducers'
+import constants    from 'redux/data/constants'
+import initialState from 'redux/data/initial_state'
+import logger       from 'redux/middleware/logger'
+import saver        from 'redux/middleware/saver'
+import rootReducer  from 'redux/reducers'
 
 const C = constants.middleware
 

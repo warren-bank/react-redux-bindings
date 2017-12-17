@@ -9,6 +9,12 @@ module.exports = {
         sourceMapFilename: 'bundle.map'
     },
     devtool: '#source-map',
+    resolve: {
+        modules: [
+            path.resolve('./src'),
+            path.resolve('./node_modules')
+        ]
+    },
     module: {
         rules: [
             {

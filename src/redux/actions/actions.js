@@ -1,5 +1,6 @@
 import uuid      from 'uuid'
-import constants from '../data/constants'
+
+import constants from 'redux/data/constants'
 
 const C = constants.actions
 
