@@ -1,3 +1,4 @@
+import React      from 'react'
 import PropTypes  from 'prop-types'
 
 import purify     from 'react/components/higher-order/purify'

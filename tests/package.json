@@ -1,0 +1,69 @@
+{
+  "name": "testing",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "cross-env NODE_ENV=testing jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel-jest": "^22.0.0",
+    "cross-env": "^5.1.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest": "^22.0.0",
+    "jest-cli": "^22.0.1",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "__devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1"
+  },
+  "__babel": {
+    "presets": [
+      "env",
+      "react",
+      "jest"
+    ]
+  },
+  "jest": {
+    "rootDir": "..",
+    "roots": [
+      "<rootDir>/tests/react"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/react/setup.js",
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/tests/node_modules/babel-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "<rootDir>/tests/node_modules",
+      "<rootDir>/node_modules",
+      "<rootDir>/src",
+      "<rootDir>/src/react/components",
+      "<rootDir>/src/react/components/higher-order",
+      "<rootDir>/src/react/components/presentation/stateless-functions"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/"
+    ]
+  },
+  "author": {
+    "name": "Warren R. Bank",
+    "email": "warren.r.bank@gmail.com",
+    "url": "https://github.com/warren-bank"
+  },
+  "license": "GPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/warren-bank/react-redux-bindings"
+  },
+  "homepage": "https://github.com/warren-bank/react-redux-bindings/tree/context-actions"
+}
