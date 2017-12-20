@@ -1,7 +1,6 @@
-import React from 'react'
-import { shallow, mount, render } from 'enzyme'
-
 import Link from 'Link'
+
+const {shallow} = enzyme
 
 const get_component = active => {
     let onClick   = jest.fn().mockName('onClick')
@@ -11,7 +10,7 @@ const get_component = active => {
     return {...props, component, children}
 }
 
-describe('presentation component: Link', function() {
+describe('React stateless presentation component: Link', function() {
 
   // ===================================
   it('should render content when active', function() {
@@ -23,13 +22,13 @@ describe('presentation component: Link', function() {
   it('should render <span> when active', function() {
     let {component} = get_component(true)
     let wrapper  = shallow(component)
-    expect(wrapper.type()).toEqual('span')
+    expect(wrapper.type()).toBe('span')
   })
 
   it('should render {children} when active', function() {
     let {component, children} = get_component(true)
     let wrapper  = shallow(component)
-    expect(wrapper.text()).toEqual(children)
+    expect(wrapper.text()).toBe(children)
   })
 
   it('should not handle "click" events when active', function() {
@@ -50,13 +49,13 @@ describe('presentation component: Link', function() {
   it('should render <a> when inactive', function() {
     let {component} = get_component(false)
     let wrapper  = shallow(component)
-    expect(wrapper.type()).toEqual('a')
+    expect(wrapper.type()).toBe('a')
   })
 
   it('should render {children} when inactive', function() {
     let {component, children} = get_component(false)
     let wrapper  = shallow(component)
-    expect(wrapper.text()).toEqual(children)
+    expect(wrapper.text()).toBe(children)
   })
 
   it('should handle "click" events when inactive', function() {

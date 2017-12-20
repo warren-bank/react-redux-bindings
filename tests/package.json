@@ -11,10 +11,12 @@
   "devDependencies": {
     "babel-jest": "^22.0.0",
     "cross-env": "^5.1.1",
+    "deep-freeze": "0.0.1",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "jest": "^22.0.0",
     "jest-cli": "^22.0.1",
+    "jest-css-modules": "^1.1.0",
     "regenerator-runtime": "^0.11.1"
   },
   "__devDependencies": {
@@ -26,6 +28,7 @@
   "__babel": {
     "presets": [
       "env",
+      "stage-0",
       "react",
       "jest"
     ]
@@ -33,22 +36,30 @@
   "jest": {
     "rootDir": "..",
     "roots": [
-      "<rootDir>/tests/react"
+      "<rootDir>/tests/react",
+      "<rootDir>/tests/redux"
     ],
-    "setupTestFrameworkScriptFile": "<rootDir>/tests/react/setup.js",
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/.jest/setup.js",
+    "setupFiles": [
+      "<rootDir>/tests/.jest/mocks/localStorage.js",
+      "<rootDir>/tests/.jest/mocks/console.js",
+      "<rootDir>/tests/.jest/globals.js"
+    ],
     "transform": {
-      "^.+\\.jsx?$": "<rootDir>/tests/node_modules/babel-jest"
+      "\\.(js|jsx)$": "<rootDir>/tests/node_modules/babel-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "<rootDir>/node_modules/jest-css-modules"
     },
     "moduleFileExtensions": [
       "js",
+      "json",
       "jsx"
     ],
     "moduleDirectories": [
       "<rootDir>/tests/node_modules",
       "<rootDir>/node_modules",
       "<rootDir>/src",
-      "<rootDir>/src/react/components",
-      "<rootDir>/src/react/components/higher-order",
       "<rootDir>/src/react/components/presentation/stateless-functions"
     ],
     "transformIgnorePatterns": [
