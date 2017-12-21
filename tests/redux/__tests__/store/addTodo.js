@@ -1,7 +1,5 @@
-import initialState from 'redux/data/initial_state'
-
-const {storeFactory} = redux
-const {addTodo}      = redux.actions
+const {storeFactory, initialState} = redux
+const {addTodo}                    = redux.actions
 
 describe('Redux store: dispatch action "addTodo"', function() {
 

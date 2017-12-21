@@ -1,7 +1,5 @@
-import initialState from 'redux/data/initial_state'
-
-const {storeFactory} = redux
-const {toggleTodo}   = redux.actions
+const {storeFactory, initialState} = redux
+const {toggleTodo}                 = redux.actions
 
 describe('Redux store: dispatch action "toggleTodo"', function() {
 
