@@ -1,8 +1,8 @@
-import constants from '../data/constants'
+import constants from 'redux/data/constants'
 
 const C = constants.actions
 
-const visibilityFilter = (state = 'SHOW_ALL', action) => {
+const visibilityFilter = (state = '', action) => {
   switch (action.type) {
     case C.SET_VISIBILITY_FILTER:
       return action.filter

@@ -6,20 +6,21 @@ import AddTodo    from './AddTodo'
 import TodoList   from './TodoList'
 import Footer     from './Footer'
 
-const getVisibleTodos = (todos, filter) => {
+const getVisibleTodos = (todos, filter, C) => {
   switch (filter) {
-    case 'SHOW_COMPLETED':
+    case C.SHOW_COMPLETED:
       return todos.filter(t => t.completed)
-    case 'SHOW_ACTIVE':
+    case C.SHOW_ACTIVE:
       return todos.filter(t => !t.completed)
-    case 'SHOW_ALL':
+    case C.SHOW_ALL:
     default:
       return todos
   }
 }
 
-const App = ({state}, context) => {
-  let todos  = getVisibleTodos(state.todos, state.visibilityFilter)
+const App = ({state}, {constants}) => {
+  let C     = constants.filter.values
+  let todos = getVisibleTodos(state.todos, state.visibilityFilter, C)
 
   return (
     <div>

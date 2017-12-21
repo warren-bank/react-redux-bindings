@@ -30,8 +30,9 @@ const purify = function(stateless_func) {
     }
 
     PureComponentWrap.contextTypes = {
-        store:   PropTypes.object,
-        actions: PropTypes.object
+        store:     PropTypes.object,
+        actions:   PropTypes.object,
+        constants: PropTypes.object
     };
 
     ["propTypes", "defaultProps"].forEach(key => {
@@ -63,7 +64,7 @@ export default purify
  * ======
  * 
  * const Component = (props, context) => {
- *     let {store, actions} = context
+ *     let {store, actions, constants} = context
  * 
  *     actions.INCREMENT_COUNTER(1)
  * 

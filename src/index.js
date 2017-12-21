@@ -1,10 +1,11 @@
 import React        from 'react'
 import ReactDOM     from 'react-dom'
 
-import Context      from 'react/components/container/class/Context'
-import App          from 'react/components/presentation/stateless-functions/App'
 import store        from 'redux/store'
 import actions      from 'redux/actions'
+import constants    from 'react/data/constants'
+import Router       from 'react/components/container/stateless-functions/Router'
+import Context      from 'react/components/container/class/Context'
 
 window.React = React
 
@@ -12,7 +13,8 @@ window.React = React
   let props = {
     store,
     actions,
-    App
+    constants,
+    component: Router
   }
 
   ReactDOM.render(
