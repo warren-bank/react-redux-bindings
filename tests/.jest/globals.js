@@ -14,12 +14,12 @@ import actions                  from 'redux/actions'
 
 Object.assign(global, {
   deepFreeze,
-  toJSON,
   React,
   enzyme: {
     shallow,
     mount,
-    render
+    render,
+    toJSON
   },
   redux: {
     compose,

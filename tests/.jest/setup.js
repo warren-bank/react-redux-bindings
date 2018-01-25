@@ -8,8 +8,8 @@ configure({ adapter: new Adapter() });
 // --------------------------------------------------
 // additional globals:
 {
-  let {compose} = redux
-  let {shallow} = enzyme
+  let {compose}         = redux
+  let {shallow, toJSON} = enzyme
 
   global.enzyme.expectJSX = compose(expect, toJSON, shallow)
 }
